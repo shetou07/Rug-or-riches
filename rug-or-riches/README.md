@@ -11,12 +11,6 @@ A futuristic Web3 prediction game built around the $GUI token, featuring a sleek
 - **Real-time pool tracking** showing total staked amounts per side
 - **Dynamic leaderboard** with player avatars and scores
 
-### 🎨 Visual Design
-- **Futuristic Web3 aesthetic** with neon color palette
-- **Glassmorphism effects** with glowing hover animations
-- **Dark mode by default** with gradient backgrounds
-- **Tech-style fonts** (Orbitron for titles, clean sans-serif for body)
-- **Floating meme animations** ("to the moon", "diamond hands", etc.)
 
 ### 💰 Wallet & Staking
 - **$GUI wallet balance** display with live updates
@@ -30,14 +24,6 @@ A futuristic Web3 prediction game built around the $GUI token, featuring a sleek
 - **Achievement notifications** and feedback
 - **Sound effects toggle** for enhanced UX
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 15 with App Router
-- **Styling**: Tailwind CSS 4 with custom animations
-- **Animations**: Framer Motion for smooth interactions
-- **Icons**: Lucide React for consistent iconography
-- **Fonts**: Orbitron (display) + Geist (body text)
-- **Language**: TypeScript for type safety
 
 ## 🚀 Getting Started
 
@@ -84,26 +70,7 @@ A futuristic Web3 prediction game built around the $GUI token, featuring a sleek
 - Shows current bet and amount staked
 - Avatar system for player identification
 
-## 🎨 Design System
 
-### Color Palette
-- **Neon Teal**: `#00ffff` - Primary accent
-- **Neon Purple**: `#8b5cf6` - Secondary accent  
-- **Neon Pink**: `#ff0080` - Highlight color
-- **Neon Green**: `#00ff88` - Success states
-- **Neon Red**: `#ff0040` - Danger states
-- **Dark Background**: `#0a0a0a` - Base color
-
-### Typography
-- **Display Font**: Orbitron (titles, timers)
-- **Body Font**: Geist Sans (content, UI)
-- **Monospace**: Geist Mono (numbers, data)
-
-### Components
-- **Glassmorphism cards** with backdrop blur
-- **Gradient buttons** with hover effects
-- **Animated progress bars** with smooth transitions
-- **Floating elements** with parallax effects
 
 ## 🔧 Customization
 
@@ -119,15 +86,6 @@ const boosters = [
 Change the timer duration in the main component:
 ```typescript
 const [timeLeft, setTimeLeft] = useState(300); // 5 minutes
-```
-
-### Customizing Colors
-Update CSS variables in `src/app/globals.css`:
-```css
-:root {
-  --neon-teal: #your-color;
-  --neon-purple: #your-color;
-}
 ```
 
 ## 🚀 Deployment
@@ -165,8 +123,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🐛 Known Issues
 
 - Wallet connection is currently simulated (ready for Web3 integration)
-- Sound effects need actual audio files
-- Mobile responsiveness could be enhanced
 - Real-time multiplayer features planned for v2
 
 ## 🔮 Roadmap
@@ -181,6 +137,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for the crypto community**
-
-*"In crypto we trust, in memes we believe"* 🚀
