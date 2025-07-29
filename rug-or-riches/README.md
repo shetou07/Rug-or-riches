@@ -1,6 +1,7 @@
 # 🚀 Rug or Riches - $GUI Prediction Game
 
 A futuristic Web3 prediction game built around the $GUI token, featuring a sleek, meme-culture inspired interface optimized for crypto-savvy users.
+Link to the site - https://rug-or-riches-nva7.vercel.app/
 
 ## ✨ Features
 
