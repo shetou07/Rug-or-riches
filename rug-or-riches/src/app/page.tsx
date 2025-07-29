@@ -3,15 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Wallet, 
-  Clock, 
   TrendingUp, 
-  TrendingDown, 
   Trophy, 
   Star,
-  Zap,
-  Moon,
-  AlertTriangle,
   Coins,
   Volume2,
   VolumeX
@@ -43,7 +37,7 @@ export default function Home() {
   const [betAmount, setBetAmount] = useState("");
   const [isConnected, setIsConnected] = useState(true);
   const [soundEnabled, setSoundEnabled] = useState(true);
-  const [showNotification, setShowNotification] = useState(false);
+  const [showNotificationState, setShowNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
   const [poolData, setPoolData] = useState<PoolData>({
     rug: 45000,
@@ -64,7 +58,7 @@ export default function Home() {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           // Round ended - show results
-          showNotification("Round ended! Calculating results...", "success");
+          showNotification("Round ended! Calculating results...");
           return 600; // Reset to 10 minutes
         }
         return prev - 1;
@@ -74,7 +68,7 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  const showNotification = (message: string, type: "success" | "error" | "info" = "info") => {
+  const showNotification = (message: string) => {
     setNotificationMessage(message);
     setShowNotification(true);
     setTimeout(() => setShowNotification(false), 3000);
@@ -82,13 +76,13 @@ export default function Home() {
 
   const handleBet = (type: "rug" | "riches") => {
     if (!betAmount || parseFloat(betAmount) <= 0) {
-      showNotification("Please enter a valid bet amount", "error");
+      showNotification("Please enter a valid bet amount");
       return;
     }
     
     const amount = parseFloat(betAmount);
     if (amount > walletBalance) {
-      showNotification("Insufficient balance", "error");
+      showNotification("Insufficient balance");
       return;
     }
 
@@ -114,13 +108,13 @@ export default function Home() {
     };
     setPlayers(prev => [newPlayer, ...prev.slice(0, 4)]);
 
-    showNotification(`Bet placed on ${type.toUpperCase()}!`, "success");
+    showNotification(`Bet placed on ${type.toUpperCase()}!`);
     setBetAmount("");
   };
 
   const handleConnectWallet = () => {
     setIsConnected(true);
-    showNotification("Wallet connected successfully!", "success");
+    showNotification("Wallet connected successfully!");
   };
 
   const floatingMemes = [
@@ -186,7 +180,7 @@ export default function Home() {
 
       {/* Notification */}
       <AnimatePresence>
-        {showNotification && (
+        {showNotificationState && (
           <motion.div
             className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 glass px-6 py-3 rounded-lg"
             initial={{ opacity: 0, y: -20 }}

@@ -59,8 +59,8 @@ A futuristic Web3 prediction game built around the $GUI token, featuring a sleek
    ```
 
 3. **Run the development server**
-   ```bash
-   npm run dev
+```bash
+npm run dev
    ```
 
 4. **Open your browser**

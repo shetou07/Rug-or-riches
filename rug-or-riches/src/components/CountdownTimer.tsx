@@ -5,10 +5,9 @@ import { Clock } from "lucide-react";
 
 interface CountdownTimerProps {
   timeLeft: number;
-  onTimeUp?: () => void;
 }
 
-export default function CountdownTimer({ timeLeft, onTimeUp }: CountdownTimerProps) {
+export default function CountdownTimer({ timeLeft }: CountdownTimerProps) {
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
